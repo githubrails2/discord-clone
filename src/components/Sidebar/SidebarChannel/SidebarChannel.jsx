@@ -4,7 +4,8 @@ const SidebarChannel = ({ id, channel }) => {
   return (
     <div className="sidebarChannel">
       <h4>
-        <span className="sidebarChannel__hash">#</span>YouTube
+        <span className="sidebarChannel__hash">#</span>
+        {channel}
       </h4>
     </div>
   );
