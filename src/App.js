@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Counter } from './features/Counter';
+
 import './App.css';
 import {Sidebar,Chat} from './components';
 const App = ( )=>  {
