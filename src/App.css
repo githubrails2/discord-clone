@@ -1,0 +1,7 @@
+:root {
+  --mainGray: #2f3135;
+  --mainGreen: #4fb185;
+}
+.app {
+  display: flex;
+}
