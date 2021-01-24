@@ -56,7 +56,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar__channelsList">
           {channels &&
-            channels.map((channel) => <SidebarChannel channel={channel} />)}
+            channels.map((channel) => <SidebarChannel key={channel.id} id={channel.id} channel={channel.channelName} />)}
         </div>
       </div>
       {/**Sidebar Voice */}
