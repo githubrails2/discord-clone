@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Sidebar.css";
-
-import SidebarChannel from "./SidebarChannel/SidebarChannel";
-import db, { auth } from "../../config/firebase";
 import { useSelector } from "react-redux";
-
+import { Avatar } from "@material-ui/core";
 import {
   ExpandMore,
   Add,
@@ -14,8 +10,11 @@ import {
   Mic,
   Settings,
   SignalCellularAlt,
+  
 } from "@material-ui/icons";
-import { Avatar } from "@material-ui/core";
+import "./Sidebar.css";
+import SidebarChannel from "./SidebarChannel/SidebarChannel";
+import db, { auth } from "../../config/firebase";
 import { selectUser } from "../../features/userSlice";
 
 const Sidebar = () => {
@@ -32,7 +31,7 @@ const Sidebar = () => {
       )
     );
   }, []);
-  console.log(channels);
+  
 
   const handleAddChannel = () => {
     const channelName = prompt("Enter a new channel name");
@@ -55,8 +54,17 @@ const Sidebar = () => {
           <Add className="sidebar__addChannel" onClick={handleAddChannel} />
         </div>
         <div className="sidebar__channelsList">
-          {channels &&
-            channels.map((channel) => <SidebarChannel key={channel.id} id={channel.id} channel={channel.channelName} />)}
+         {
+           channels && 
+
+           channels.map(channel => (
+            
+            
+           <SidebarChannel key={channel.id} channel={channel.channel.channelName} id={channel.id}/>
+           ))
+         }
+          
+          
         </div>
       </div>
       {/**Sidebar Voice */}

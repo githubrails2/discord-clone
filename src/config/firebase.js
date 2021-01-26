@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyDSkSz3THSxSkoakxOE-kiIpzHEilkxRRQ",
     authDomain: "discord-clone-yt-be051.firebaseapp.com",
